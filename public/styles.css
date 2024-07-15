@@ -1,0 +1,406 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --background-color-light: #f0f4f8;
+    --text-color-light: #2c3e50;
+    --background-color-dark: #2c3e50;
+    --text-color-dark: #ecf0f1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color-light);
+    background-color: var(--background-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    padding-top: 60px;
+}
+
+section {
+    padding: 4rem 2rem;
+    margin-bottom: 0;
+}
+
+section:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.skill-charts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.chart-container {
+    width: 30%;
+    min-width: 300px;
+    margin-bottom: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #34495e;
+}
+
+.dark-mode h1,
+.dark-mode h2 {
+    color: var(--secondary-color);
+}
+
+.dark-mode .project-card {
+    background-color: #34495e;
+    color: var(--text-color-dark);
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #445566;
+    color: var(--text-color-dark);
+    border: 1px solid #556677;
+}
+
+.dark-mode button {
+    background-color: var(--secondary-color);
+    color: var(--text-color-dark);
+}
+
+.dark-mode button:hover {
+    background-color: var(--accent-color);
+}
+
+#darkModeToggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10; /* Add this line */
+    
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .chart-container {
+        width: 100%;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+}
+/* ... (your existing styles) ... */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        background-color: var(--primary-color);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .chart-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Add smooth transitions for interactive elements */
+.project-card, .social-icons a, button, nav a {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+button:hover, nav a:hover {
+    opacity: 0.8;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: var(--accent-color);
+}
+
+.project-link i {
+    margin-left: 0.5rem;
+}
+
+.dark-mode .project-link {
+    background-color: var(--secondary-color);
+    color: var(--text-color-dark);
+}
+
+.dark-mode .project-link:hover {
+    background-color: var(--accent-color);
+}
+/* Other styles */
+
+/* Add this new style block */
+.cv-download {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cv-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cv-link:hover {
+    background-color: var(--accent-color);
+}
+/* Add this new style block */
+.cv-preview {
+    text-align: center;
+    margin-top: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+

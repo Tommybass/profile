@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Nsiah - Data Scientist, ML Engineer & Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Thomas Nsiah</div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        
+    </header>
+
+    <main>
+        <section id="home">
+            <h1 data-aos="fade-up">Thomas Nsiah</h1>
+            <h2 data-aos="fade-up" data-aos-delay="200">Data Scientist, Machine Learning Engineer & Web Developer</h2>
+            <div class="social-icons" data-aos="fade-up" data-aos-delay="400">
+                <a href="https://github.com/Tommybass" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/thomas-nsiah/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://medium.com/@nsiahthomasagyei" target="_blank"><i class="fab fa-medium"></i></a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 data-aos="fade-right">About Me</h2>
+            <div class="about-content" data-aos="fade-up">
+                <img src="profilepic.jpg" alt="Thomas Nsiah" class="profile-picture">
+                <p>I'm a dynamic data scientist and machine learning engineer with a passion for innovation and education. With over two years of professional experience, I specialize in leveraging advanced technologies and data-driven methodologies to solve complex problems. My expertise covers a wide range of areas, including machine learning, deep learning, statistical analysis, and data visualization. I hold a Master's degree in Artificial Intelligence and Data Science from the University of Hull, which equips me with a solid technical foundation and exceptional teaching capabilities. I thrive on blending my technical knowledge with my enthusiasm for education to create impactful solutions and inspire others.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 data-aos="fade-right">Skills</h2>
+            <div class="skill-charts">
+                <div class="chart-container" data-aos="fade-up">
+                    <canvas id="languagesChart"></canvas>
+                </div>
+                <div class="chart-container" data-aos="fade-up" data-aos-delay="200">
+                    <canvas id="toolsChart"></canvas>
+                </div>
+                <div class="chart-container" data-aos="fade-up" data-aos-delay="400">
+                    <canvas id="webDevChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 data-aos="fade-right">Projects</h2>
+            <div class="project-grid" id="projectGrid"></div>
+        </section>
+
+        <section id="cv">
+            <h2 data-aos="fade-right">Download My CV</h2>
+            <div class="cv-download" data-aos="fade-up">
+                <a href="CV.pdf" download class="cv-link">Download CV <i class="fas fa-download"></i></a>
+            </div>
+            <h2 data-aos="fade-right">Preview My CV</h2>
+            <div class="cv-preview" data-aos="fade-up">
+                <iframe src="CV.pdf" width="500em" height="400px"></iframe>
+            </div>
+        </section>
+        
+
+        <section id="contact">
+            <h2 data-aos="fade-right">Contact Me</h2>
+            <form id="contactForm" data-aos="fade-up">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Thomas Nsiah. All rights reserved.</p>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
